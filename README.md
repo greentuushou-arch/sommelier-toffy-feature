@@ -33,7 +33,7 @@ GitHub Pages（このリポジトリの Pages 設定）。`index.html` と `imag
 
 ## フォント
 
-Google Fonts：見出し=Zen Maru Gothic / 本文=Zen Kaku Gothic New / 数字アクセント=Rampart One / 英字=Josefin Sans。レトロでまるい調理家電の世界観に合わせ、標準の Kaisei Opti は使わず角丸ゴシック主体にしています。
+Google Fonts：見出し=Dela Gothic One（角ゴシックの極太ディスプレイ）/ 本文・ラベル=Zen Kaku Gothic New / シーン番号=Rampart One / 英字=Josefin Sans。カラフルポップ・レトロの世界観に合わせ、標準の Kaisei Opti・丸ゴシックは不使用。`--font-head` / `--font-body` の CSS変数で差し替え可能。
 
 ## 掲載商品（20台）
 
