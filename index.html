@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>トフィーのある台所 ｜ 家具のソムリエ Toffy 特集</title>
+<meta name="description" content="トフィー（Toffy）の調理家電だけを集めた、家具のソムリエの特集ページ。トースター、コーヒーメーカー、電子レンジ、ホットサンドメーカーなど、置くだけで気分が上がる家電を20台。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Rampart+One&family=Josefin+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ base ============ */
+:root{
+  --cream:#FBF2E0;
+  --paper:#FFFBF1;
+  --ink:#2C2622;
+  --tomato:#E64B33;
+  --marigold:#F0AE2E;
+  --aqua:#3FA89C;
+  --pink:#E88AA6;
+  --grass:#7C9E3B;
+  --sky:#5FA9CE;
+  --tint-a:#FCEBCB;
+  --tint-b:#F7E1D6;
+  --tint-c:#DCEFEA;
+  --tint-d:#F7E2E9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  background-image:radial-gradient(rgba(44,38,34,.06) 1.4px, transparent 1.5px);
+  background-size:24px 24px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+.mincho{font-family:"Zen Maru Gothic",serif}
+.en{font-family:"Josefin Sans",sans-serif;letter-spacing:.06em}
+
+h1,h2,h3{font-family:"Zen Maru Gothic",serif;font-weight:900;line-height:1.32;letter-spacing:.01em}
+
+/* chunky retro button */
+.btn{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-family:"Zen Maru Gothic",serif;font-weight:700;
+  font-size:1.05rem;
+  background:var(--paper);color:var(--ink);
+  border:2.5px solid var(--ink);
+  border-radius:999px;
+  padding:.85em 1.5em;
+  box-shadow:5px 5px 0 var(--ink);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn .arw{width:20px;height:12px;flex:none}
+
+/* ============ FV ============ */
+.fv{position:relative;padding:34px 0 0}
+.fv .wrap{position:relative}
+.fv .kicker{
+  display:inline-block;
+  font-family:"Zen Maru Gothic",serif;font-weight:700;
+  font-size:.82rem;letter-spacing:.18em;
+  border:2px solid var(--ink);border-radius:999px;
+  padding:.35em 1em;margin-bottom:22px;
+  background:var(--paper);
+}
+.fv h1{
+  font-size:clamp(2.05rem,8.4vw,4.15rem);
+  letter-spacing:.005em;
+}
+.fv h1 .hl{
+  background:linear-gradient(transparent 62%, var(--marigold) 62%, var(--marigold) 92%, transparent 92%);
+  padding:0 .06em;
+}
+.fv h1 .hl.t{background:linear-gradient(transparent 62%, var(--tomato) 62%, var(--tomato) 92%, transparent 92%);color:var(--paper)}
+.fv .lead{
+  margin-top:22px;max-width:30em;
+  font-size:clamp(.98rem,2.6vw,1.12rem);font-weight:500;
+}
+.fv .count{
+  margin-top:20px;display:flex;align-items:baseline;gap:.4em;
+  font-family:"Zen Maru Gothic",serif;font-weight:900;
+}
+.fv .count b{font-size:clamp(2.6rem,9vw,3.6rem);color:var(--tomato);line-height:1}
+.fv .count span{font-size:1rem}
+
+/* appliance niche cluster */
+.cluster{
+  margin:34px 0 0;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:14px;
+}
+.niche{
+  position:relative;
+  background:var(--paper);
+  border:2.5px solid var(--ink);
+  border-radius:44% 44% 14px 14px / 52% 52% 14px 14px;
+  padding:20px 14px 14px;
+  aspect-ratio:1/1.08;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.niche::before{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:34%;
+  background:var(--nc,var(--tint-a));
+  z-index:0;
+}
+.niche img{position:relative;z-index:1;mix-blend-mode:multiply;width:88%}
+.niche:nth-child(1){--nc:var(--tint-a);transform:rotate(-2deg)}
+.niche:nth-child(2){--nc:var(--tint-c);transform:rotate(1.5deg)}
+.niche:nth-child(3){--nc:var(--tint-d);transform:rotate(1.5deg)}
+.niche:nth-child(4){--nc:var(--tint-b);transform:rotate(-1.5deg)}
+
+/* ticker */
+.ticker{
+  margin-top:40px;
+  background:var(--ink);color:var(--cream);
+  border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);
+  overflow:hidden;white-space:nowrap;
+}
+.ticker__in{display:inline-flex;gap:0;animation:scroll 26s linear infinite}
+.ticker span{
+  font-family:"Zen Maru Gothic",serif;font-weight:700;
+  font-size:1rem;padding:14px 0;
+}
+.ticker i{
+  display:inline-block;width:10px;height:10px;margin:0 26px;
+  background:var(--marigold);transform:rotate(45deg) translateY(-1px);
+}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker__in{animation:none}}
+
+/* ============ intro ============ */
+.intro{padding:76px 0}
+.intro h2{font-size:clamp(1.6rem,5.6vw,2.5rem)}
+.intro p{margin-top:20px;max-width:34em;font-size:1.03rem;font-weight:500}
+.intro .mark{
+  display:block;width:64px;height:6px;background:var(--tomato);
+  margin-bottom:26px;
+}
+
+/* ============ scene ============ */
+.scene{padding:64px 0 72px;position:relative}
+.scene.a{background:var(--tint-a)}
+.scene.b{background:var(--tint-b)}
+.scene.c{background:var(--tint-c)}
+.scene.d{background:var(--tint-d)}
+.scene__head{display:flex;align-items:flex-start;gap:16px;margin-bottom:34px}
+.scene__no{
+  font-family:"Rampart One",cursive;
+  font-size:clamp(2.4rem,10vw,3.6rem);line-height:.8;
+  color:var(--ac,var(--tomato));
+  transform:rotate(-5deg);flex:none;
+  -webkit-text-stroke:1.5px var(--ink);
+}
+.scene__ttl h2{font-size:clamp(1.5rem,5.4vw,2.2rem)}
+.scene__ttl p{font-weight:700;font-family:"Zen Maru Gothic",serif;margin-top:4px;font-size:.98rem}
+.scene.a{--ac:var(--marigold)}
+.scene.b{--ac:var(--tomato)}
+.scene.c{--ac:var(--aqua)}
+.scene.d{--ac:var(--pink)}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+.card{
+  background:var(--paper);
+  border:2.5px solid var(--ink);
+  border-radius:18px;
+  padding:14px 14px 16px;
+  display:flex;flex-direction:column;
+  box-shadow:5px 5px 0 rgba(44,38,34,.9);
+}
+.card__ph{
+  position:relative;border-radius:12px;overflow:hidden;
+  background:var(--ac);
+  aspect-ratio:1/1;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:12px;
+}
+.card__ph::after{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.5) 2px,transparent 2.4px);
+  background-size:16px 16px;mix-blend-mode:soft-light;
+}
+.card__ph img{width:86%;mix-blend-mode:multiply;position:relative;z-index:1}
+.card__model{
+  font-family:"Josefin Sans",sans-serif;font-weight:700;
+  font-size:.74rem;letter-spacing:.08em;
+  color:var(--ink);opacity:.6;
+}
+.card__name{
+  font-family:"Zen Maru Gothic",serif;font-weight:700;
+  font-size:1rem;line-height:1.5;margin:3px 0 2px;
+}
+.card__note{font-size:.92rem;font-weight:500;opacity:.85;flex:1;line-height:1.7}
+.card__row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.card__price{
+  font-family:"Zen Maru Gothic",serif;font-weight:900;font-size:1.15rem;
+}
+.card__price small{font-size:.72rem;font-weight:700;margin-left:2px}
+.card__go{
+  font-family:"Zen Maru Gothic",serif;font-weight:700;font-size:.82rem;
+  border:2px solid var(--ink);border-radius:999px;
+  padding:.3em .9em;background:var(--marigold);
+  white-space:nowrap;
+}
+.card.big{grid-column:1 / -1}
+.card.big .card__ph{aspect-ratio:16/11}
+.card.big .card__ph img{width:auto;height:88%;max-width:70%}
+.card.big .card__name{font-size:1.3rem}
+.card.big .card__note{font-size:.95rem}
+.card.big .card__price{font-size:1.5rem}
+
+/* ============ colors ============ */
+.colors{padding:80px 0}
+.colors h2{font-size:clamp(1.6rem,5.6vw,2.4rem)}
+.colors p{margin-top:16px;max-width:33em;font-weight:500}
+.swatches{display:flex;gap:0;margin-top:30px;border:2.5px solid var(--ink);border-radius:14px;overflow:hidden}
+.swatches div{
+  flex:1;padding:26px 10px;text-align:center;
+  font-family:"Zen Maru Gothic",serif;font-weight:700;font-size:.8rem;
+  border-right:2.5px solid var(--ink);
+}
+.swatches div:last-child{border-right:0}
+.sw1{background:#BFE3DD}
+.sw2{background:var(--paper)}
+.sw3{background:var(--ink);color:var(--cream)}
+.sw4{background:#CFC0AC}
+.sw5{background:linear-gradient(115deg,var(--marigold) 0 33%,var(--pink) 33% 66%,var(--aqua) 66% 100%);color:var(--paper)}
+
+/* ============ buy ============ */
+.buy{padding:70px 0 84px}
+.buy__box{
+  background:var(--paper);
+  border:2.5px solid var(--ink);
+  border-radius:22px;
+  box-shadow:8px 8px 0 var(--ink);
+  padding:38px 26px;
+}
+.buy h2{font-size:clamp(1.55rem,5.4vw,2.3rem)}
+.buy ul{list-style:none;margin:24px 0 30px}
+.buy li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-weight:500;border-bottom:1px dashed rgba(44,38,34,.3)}
+.buy li:last-child{border-bottom:0}
+.buy li svg{flex:none;margin-top:5px}
+.buy li b{font-family:"Zen Maru Gothic",serif}
+.buy .btn{font-size:1.1rem}
+.foot{margin-top:36px;font-size:.78rem;opacity:.66;line-height:1.7}
+
+/* ============ PC ============ */
+@media(min-width:820px){
+  .fv{padding:56px 0 0}
+  .fv .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+  .fv .txt{padding-top:14px}
+  .cluster{margin:0;gap:18px}
+  .niche{aspect-ratio:1/1.12}
+
+  .intro{padding:110px 0}
+  .intro .wrap{display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:start}
+  .intro h2{font-size:2.7rem}
+
+  .scene{padding:96px 0 104px}
+  .grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .card.big{grid-column:span 1;grid-row:span 2;display:grid;grid-template-rows:auto auto 1fr auto}
+  .card.big .card__ph{aspect-ratio:1/1}
+  .card.big .card__ph img{height:auto;width:88%;max-width:88%}
+  .scene__head{gap:22px}
+
+  .swatches div{padding:40px 12px;font-size:.92rem}
+  .buy__box{padding:56px 54px}
+  .buy .wrap{max-width:900px}
+}
+@media(min-width:820px){
+  .pc-br{display:inline}
+  .sp-br{display:none}
+}
+.pc-br{display:none}
+.sp-br{display:inline}
+</style>
+</head>
+<body>
+
+<!-- ================= FV ================= -->
+<header class="fv">
+  <div class="wrap">
+    <div class="txt">
+      <span class="kicker">家具のソムリエ ＜ Toffy 特集</span>
+      <h1>だいどころが、<span class="sp-br"><br></span>いちばん<span class="hl">楽しい</span><br>部屋になる。</h1>
+      <p class="lead">トフィーの調理家電だけを、家具のソムリエで集めました。トースターも、コーヒーメーカーも、レンジも。うしろ姿までかわいい家電に、台所ごと囲まれてみる。</p>
+      <div class="count"><b>20</b><span>台、そろっています</span></div>
+    </div>
+    <div class="cluster" id="fvCluster"><!-- niches injected --></div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__in" id="ticker"></div>
+  </div>
+</header>
+
+<!-- ================= INTRO ================= -->
+<section class="intro">
+  <div class="wrap">
+    <h2><span class="mark"></span>朝は、トースターの前で<br class="pc-br">待つ時間から。</h2>
+    <p>焼きあがるまでの数分、コーヒーの落ちる音、立ちのぼる湯気。トフィーの家電は「できあがるまで」の時間まで気持ちがいい。まるくて、レトロで、ちゃんと色がある。そういう道具を、今日の台所に一台ずつ。</p>
+  </div>
+</section>
+
+<!-- ================= SCENES ================= -->
+<main id="scenes"></main>
+
+<!-- ================= COLORS ================= -->
+<section class="colors">
+  <div class="wrap">
+    <h2>色から選んでも、いい。</h2>
+    <p>トフィーは同じシリーズで色がそろう。レンジも、トースターも、ケトルも。ひとつの色でまとめると、台所全体に統一感が出る。まずは好きな一色から。</p>
+    <div class="swatches">
+      <div class="sw1">ペール<br>アクア</div>
+      <div class="sw2">アッシュ<br>ホワイト</div>
+      <div class="sw3">リッチ<br>ブラック</div>
+      <div class="sw4">グレージュ</div>
+      <div class="sw5">ハッピー<br>カラー</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUY ================= -->
+<section class="buy">
+  <div class="wrap">
+    <div class="buy__box">
+      <h2>この特集は、<br class="sp-br">家具のソムリエでどうぞ。</h2>
+      <ul>
+        <li><svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 11.5l4.5 4.5L18 5.5" fill="none" stroke="#2C2622" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>レビュー 13,365件・総合 4.8</b>／いえの中をそろえるお店として積み上げてきた評価です。</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 11.5l4.5 4.5L18 5.5" fill="none" stroke="#2C2622" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>掲載のトフィー家電はすべて送料無料</b>。</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 11.5l4.5 4.5L18 5.5" fill="none" stroke="#2C2622" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>14時までの注文で最短翌日お届け</b>（一部地域を除く）。</span></li>
+      </ul>
+      <a class="btn" id="allBtn" href="#" target="_blank" rel="noopener">
+        トフィーの家電をぜんぶ見る
+        <svg class="arw" viewBox="0 0 20 12"><path d="M0 6h17M12 1l6 5-6 5" fill="none" stroke="#2C2622" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="foot">掲載の価格・ポイントは制作時点（2026年8月）に楽天市場「家具のソムリエ」で確認したものです。最新の価格・在庫・仕様・送料・キャンペーン内容は各商品ページでご確認ください。商品画像は同店の掲載画像を参照しています。トフィー（Toffy）は株式会社ラドンナのブランドです。</p>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ---------- product data (家具のソムリエ / Toffy 調理家電) ---------- */
+const IMG = u => "https://tshop.r10s.jp/sommelier/cabinet/" + u + "?fitin=600:600";
+const scenes = [
+  {
+    cls:"a", no:"01", title:"めざめの家電", lead:"朝ごはんをおいしくする 7台",
+    items:[
+      {m:"K-TS5", name:"ノンフライ オーブントースター", note:"1台5役。トースト・ノンフライ・グリル・発酵・スローベーク。", price:"22,000", img:"0000tfy_rv/default/s1/goods-314_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-314/"},
+      {m:"K-TS4", name:"オーブントースター", note:"2段式・庫内温度調整つき。レシピブック付き。", price:"7,920", img:"0000/default/s1/goods-045_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-045/"},
+      {m:"K-HTS1", name:"オーブントースター ミニ", note:"食パン1枚焼きのコンパクトサイズ。", price:"5,500", img:"0000/default/s1/goods-01603_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01603/"},
+      {m:"K-HS3", name:"ハーフ ホットサンドメーカー", note:"食パンを半分に折って、片手で持てるサイズに。", price:"5,500", img:"0000/default/s1/goods-109_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-109/"},
+      {m:"K-HS6", name:"クォーター ホットサンドメーカー", note:"耳まで焼ける4分割。お弁当やおやつに。", price:"11,000", img:"0000tfy_rv/default/s1/goods-01128_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01128/"},
+      {m:"K-FS2", name:"エッグスチーマー", note:"半熟から固ゆでまで、ゆで卵を電動で。", price:"3,520", img:"0000/default/sku/goods-01516-1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01516/"},
+      {m:"K-HKT1", name:"給湯ロック付き 電気ケトル 0.8L", note:"倒れてもお湯が漏れにくいロック機構。空焚き防止。", price:"5,500", img:"0000/default/sku/goods-01599-1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01599/"}
+    ]
+  },
+  {
+    cls:"b", no:"02", title:"コーヒーのある暮らし", lead:"一杯のための 4台",
+    items:[
+      {m:"K-CM9", name:"全自動ミル付 カスタムドリップ コーヒーメーカー", note:"豆から挽いて、5杯分。アロマセレクト＆タイマー機能。", price:"29,700", img:"0000tfy_rv/default/sku/goods-142-1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-142/"},
+      {m:"K-CM8", name:"5カップ アロマ コーヒーメーカー", note:"蒸らし機能つき。ステンレスサーバーで保温。", price:"5,500", img:"0000/default/sku/goods-049-2.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-049/"},
+      {m:"K-CM12", name:"ダイレクトドリップ アロマ コーヒーメーカー", note:"付属のステンレスタンブラーへ直接ドリップ。持ち出せる。", price:"11,000", img:"0000tfy_rv/default/sku/goods-01209-2.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01209/"},
+      {m:"K-CM11", name:"電動 コールドブリューボトル", note:"USB充電式。水出しコーヒーをボトルの中で。", price:"9,680", img:"0000/default/sku/goods-976-2.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-976/"}
+    ]
+  },
+  {
+    cls:"c", no:"03", title:"ごはんとおかず", lead:"毎日をまわす 6台",
+    items:[
+      {m:"K-DR2", name:"オーブンレンジ", note:"あたため・オーブン・グリル・解凍・トースト。フラット庫内。", price:"38,500", img:"0000tfy_rv/default/s1/goods-833_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-833/"},
+      {m:"K-DR3", name:"電子レンジ 16L", note:"フラットテーブル。横開き・消音機能つきのコンパクト。", price:"22,000", img:"0000tfy_rv/default/s1/goods-01660_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01660/"},
+      {m:"K-HP4", name:"2way 電気マルチポット 1.6L", note:"煮る・炊く・揚げる・沸かすを一台で。卓上鍋にも。", price:"11,000", img:"0000tfy_rv/default/sku/goods-01205-1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01205/"},
+      {m:"K-AS2", name:"オートスープブレンダー 600ml", note:"材料を入れてボタンを押すだけ。ポタージュもスムージーも。", price:"9,900", img:"0000/default/s1/goods-01837_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01837/"},
+      {m:"K-SY1", name:"スモークレス 焼肉ロースター", note:"煙が出にくい低煙設計。焼き網と平面プレート付き。", price:"15,840", img:"0000/default/sku/goods-108-1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-108/"},
+      {m:"K-GP1", name:"オーバル グリルプレート", note:"卓上1000Wの高火力。焼く・煮る・保温まで。", price:"22,000", img:"0000tfy_rv/default/s1/goods-01079_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01079/"}
+    ]
+  },
+  {
+    cls:"d", no:"04", title:"たのしい食卓", lead:"集まる日の 3台",
+    items:[
+      {m:"K-BE1", name:"ビアカクテル サーバー", note:"缶ビールをセットして、きめ細かい泡に。ビアカクテルも。", price:"13,200", img:"0000/default/sku/goods-695-1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-695/"},
+      {m:"K-WS2", name:"ウォーターサーバー 卓上・温冷両用", note:"2Lペットボトルをセットするだけ。お湯も冷水もすぐ。", price:"19,800", img:"0000tfy_rv/default/s1/goods-146_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-146/"},
+      {m:"K-CP1", name:"クレープメーカー", note:"生地に浸してひっくり返すだけ。ホームパーティーに。", price:"3,850", img:"0000/default/s1/goods-01088_s1.jpg", url:"https://item.rakuten.co.jp/sommelier/goods-01088/"}
+    ]
+  }
+];
+const STORE_TOFFY_URL = "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%83%95%E3%82%A3%E3%83%BC/?sid=333706";
+
+/* ---------- render scenes ---------- */
+const arw = '<svg class="arw" viewBox="0 0 20 12" width="18" height="11"><path d="M0 6h15M11 1l6 5-6 5" fill="none" stroke="#2C2622" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+document.getElementById("scenes").innerHTML = scenes.map(s => `
+  <section class="scene ${s.cls}" id="scene-${s.no}">
+    <div class="wrap">
+      <div class="scene__head">
+        <div class="scene__no">${s.no}</div>
+        <div class="scene__ttl"><h2>${s.title}</h2><p>${s.lead}</p></div>
+      </div>
+      <div class="grid">
+        ${s.items.map((it,i) => `
+          <a class="card${i===0?' big':''}" href="${it.url}" target="_blank" rel="noopener">
+            <div class="card__ph"><img loading="lazy" src="${IMG(it.img)}" alt="トフィー ${it.name}"></div>
+            <div class="card__model en">${it.m}</div>
+            <div class="card__name">${it.name}</div>
+            <p class="card__note">${it.note}</p>
+            <div class="card__row">
+              <div class="card__price">¥${it.price}<small>税込</small></div>
+              <span class="card__go">見る ${arw}</span>
+            </div>
+          </a>`).join("")}
+      </div>
+    </div>
+  </section>`).join("");
+
+/* ---------- FV niche cluster (first item of each scene) ---------- */
+document.getElementById("fvCluster").innerHTML = scenes.map(s => {
+  const it = s.items[0];
+  return `<a class="niche" href="${it.url}" target="_blank" rel="noopener" aria-label="トフィー ${it.name}">
+    <img loading="lazy" src="${IMG(it.img)}" alt="トフィー ${it.name}"></a>`;
+}).join("");
+
+/* ---------- ticker ---------- */
+const tickText = ["家具のソムリエ", "Toffy 調理家電 20台", "送料無料", "最短翌日お届け", "レビュー 4.8", "レトロでかわいい台所"];
+const one = tickText.map(t => `<span>${t}</span><i></i>`).join("");
+document.getElementById("ticker").innerHTML = one + one;
+
+/* ---------- store button ---------- */
+document.getElementById("allBtn").href = STORE_TOFFY_URL;
+</script>
+</body>
+</html>
