@@ -20,10 +20,10 @@
   --pink:#E88AA6;
   --grass:#7C9E3B;
   --sky:#5FA9CE;
-  --tint-a:#FCEBCB;
-  --tint-b:#F7E1D6;
-  --tint-c:#DCEFEA;
-  --tint-d:#F7E2E9;
+  --tint-a:#FBE7BC;
+  --tint-b:#F8D8C8;
+  --tint-c:#D3EAE3;
+  --tint-d:#F7DAE6;
   --font-body:"Zen Kaku Gothic New",system-ui,sans-serif;
   --font-head:"Dela Gothic One","Zen Kaku Gothic New",sans-serif;
 }
@@ -120,9 +120,9 @@ h3{font-family:var(--font-body);font-weight:700;line-height:1.5}
   background:#fff;border-radius:10px 10px 8px 8px;
 }
 .niche:nth-child(1){--nc:var(--marigold);transform:rotate(-2deg)}
-.niche:nth-child(2){--nc:var(--aqua);transform:rotate(1.5deg)}
-.niche:nth-child(3){--nc:var(--pink);transform:rotate(1.5deg)}
-.niche:nth-child(4){--nc:var(--tomato);transform:rotate(-1.5deg)}
+.niche:nth-child(2){--nc:var(--tomato);transform:rotate(1.5deg)}
+.niche:nth-child(3){--nc:var(--aqua);transform:rotate(1.5deg)}
+.niche:nth-child(4){--nc:var(--pink);transform:rotate(-1.5deg)}
 
 /* ticker */
 .ticker{
@@ -206,12 +206,13 @@ h3{font-family:var(--font-body);font-weight:700;line-height:1.5}
   font-size:.74rem;letter-spacing:.08em;
   color:var(--ink);opacity:.6;
 }
+.card__body{display:flex;flex-direction:column;flex:1}
 .card__name{
   font-family:var(--font-body);font-weight:700;
   font-size:1rem;line-height:1.5;margin:3px 0 2px;
 }
 .card__note{font-size:.92rem;font-weight:500;opacity:.85;flex:1;line-height:1.7}
-.card__row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.card__row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
 .card__price{
   font-family:var(--font-body);font-weight:900;font-size:1.15rem;
 }
@@ -219,7 +220,7 @@ h3{font-family:var(--font-body);font-weight:700;line-height:1.5}
 .card__go{
   font-family:var(--font-body);font-weight:700;font-size:.82rem;
   border:2px solid var(--ink);border-radius:999px;
-  padding:.3em .9em;background:var(--marigold);
+  padding:.3em .9em;background:var(--paper);
   white-space:nowrap;
 }
 .card.big{grid-column:1 / -1}
@@ -277,8 +278,12 @@ h3{font-family:var(--font-body);font-weight:700;line-height:1.5}
 
   .scene{padding:96px 0 104px}
   .grid{grid-template-columns:repeat(3,1fr);gap:20px}
-  .card.big{grid-column:span 1;grid-row:span 2;display:grid;grid-template-rows:auto auto 1fr auto}
-  .card.big .card__ph{aspect-ratio:1/1}
+  .card.big{grid-column:1 / -1;flex-direction:row;gap:28px;padding:18px}
+  .card.big .card__ph{width:36%;max-width:420px;flex:none;aspect-ratio:1/1;margin-bottom:0}
+  .card.big .card__body{justify-content:center}
+  .card.big .card__note{flex:none;margin-top:8px;font-size:1rem}
+  .card.big .card__name{font-size:1.5rem}
+  .card.big .card__price{font-size:1.6rem}
   .scene__head{gap:22px}
 
   .swatches div{padding:40px 12px;font-size:.92rem}
@@ -416,12 +421,14 @@ document.getElementById("scenes").innerHTML = scenes.map(s => `
         ${s.items.map((it,i) => `
           <a class="card${i===0?' big':''}" href="${it.url}" target="_blank" rel="noopener">
             <div class="card__ph"><img loading="lazy" src="${IMG(it.img)}" alt="トフィー ${it.name}"></div>
-            <div class="card__model en">${it.m}</div>
-            <div class="card__name">${it.name}</div>
-            <p class="card__note">${it.note}</p>
-            <div class="card__row">
-              <div class="card__price">¥${it.price}<small>税込</small></div>
-              <span class="card__go">見る ${arw}</span>
+            <div class="card__body">
+              <div class="card__model en">${it.m}</div>
+              <div class="card__name">${it.name}</div>
+              <p class="card__note">${it.note}</p>
+              <div class="card__row">
+                <div class="card__price">¥${it.price}<small>税込</small></div>
+                <span class="card__go">見る ${arw}</span>
+              </div>
             </div>
           </a>`).join("")}
       </div>
